@@ -19,7 +19,11 @@
                         name = "title"
                         class="form-control"
                         type = "text" 
+                        value ="{{old('title')}}"
                         >
+                        <div class="text-danger">
+                            {{$errors->first('title')}}
+                        </div>
                     </div>
                     <div>
                         <label for = "body">
@@ -34,7 +38,11 @@
                         >
                             
                         </textarea>
-                        
+                            {{old('body')}}
+                        <div class="text-danger">
+                            {{$errors->first('body')}}
+                        </div>
+                            
                         <div class="mt-5">
                             <a class="btn btn-secondary" href = "{{route('top')}}">
                                 キャンセル
